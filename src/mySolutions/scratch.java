@@ -4,24 +4,34 @@ import java.time.Instant;
 import java.util.Arrays;
 
 public class scratch {
+
+    ////////////////////////////////////////////////////////////////
+    // BigO introduction
+    ////////////////////////////////////////////////////////////////
     static String[] nemo = new String[] {"Nemo"};
     static String[] everyone = new String[] {"dory", "bruce", "marlin", "Nemo", "gill",
-        "bloat", "nigel", "squirt", "darla", "hank"};}
+        "bloat", "nigel", "squirt", "darla", "hank"};
 
     // how long does it take to find Nemo?
     // what is the BigO?
     public static void findNemo(String[] nemo) {
-        Instant t0 = Instant.now();
+
         for (int i = 0; i < nemo.length; i++) {
             if (nemo[i].equals("Nemo")) {
                 System.out.println("Found NEMO!");
             }
         }
-        Instant t1 = Instant.now();
-        System.out.println("Call to findNemo took " + (t1.toEpochMilli() - t0.toEpochMilli()) + " milliseconds.");
     }
 
+    static int[] boxes = new int[] {0, 1, 2, 3, 4, 5};
+
+    public static void logFirstTwoBoxes(int[] boxes) {
+        System.out.println(boxes[0]); // O(1)
+        System.out.println(boxes[1]); // O(1)
+    }
     public static void main(String[] args) {
-            findNemo(everyone);
+            findNemo(everyone); // O(n) --> linear Time
+
+            logFirstTwoBoxes(boxes); // O(1) --> Constant Time
         }
 }
