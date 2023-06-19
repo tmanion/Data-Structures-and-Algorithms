@@ -1,12 +1,15 @@
 package mySolutions;
 
-import java.time.Instant;
-import java.util.Arrays;
+import java.lang.Math;
 
 public class scratch {
 
     ////////////////////////////////////////////////////////////////
     // BigO introduction
+    ////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////////
+    // Time complexity
     ////////////////////////////////////////////////////////////////
     static String[] nemo = new String[] {"Nemo"};
     static String[] everyone = new String[] {"dory", "bruce", "marlin", "Nemo", "gill",
@@ -29,9 +32,41 @@ public class scratch {
         System.out.println(boxes[0]); // O(1)
         System.out.println(boxes[1]); // O(1)
     }
-    public static void main(String[] args) {
-            findNemo(everyone); // O(n) --> linear Time
 
-            logFirstTwoBoxes(boxes); // O(1) --> Constant Time
+    ///////////////////////////////////////////////////////////////
+    // Space complexity
+    ///////////////////////////////////////////////////////////////
+
+
+    // O(1)
+    public static void boooo(int[] n) {
+        for (int i = 0; i < n.length; i++) {
+            System.out.println("boooo");
         }
+    }
+
+    // O(n)
+    public static String[] arrayOfHiNTimes(int n) {
+        String[] hiArray = new String[n];
+        for (int i = 0; i < n; i++) {
+            hiArray[i] = "hi";
+        }
+        return hiArray;
+    }
+
+
+    ///////////////////////////////////////////////////////////////
+    // RUN IT!
+    ////////////////////////////////////////////////////////////////
+    public static void main(String[] args) {
+        // time complexity    
+        findNemo(everyone); // O(n) --> linear Time
+
+        logFirstTwoBoxes(boxes); // O(1) --> Constant Time
+
+        // space complexity
+        boooo(new int[] {1, 2, 3, 4, 5}); // O(1) --> constant space
+
+        arrayOfHiNTimes(6); // O(n) --> linear space
+    }
 }
