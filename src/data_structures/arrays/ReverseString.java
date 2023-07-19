@@ -2,7 +2,7 @@ package data_structures.arrays;
 
 public class ReverseString {
 
-  public static String ReverseString(String string) {
+  public static String reverseString(String string) {
     String result = ""; //It's more recommended to use "StringBuilder" object when manipulating strings
     final int length = string.length();
     for (int i = length - 1; i >= 0; i--) {
@@ -11,7 +11,7 @@ public class ReverseString {
     return result;
   }
 
-  public static String ReverseStringWithReelJava(String string) {
+  public static String reverseStringWithReelJava(String string) {
     return new StringBuilder(string).reverse().toString();
   }
 
@@ -22,8 +22,8 @@ public class ReverseString {
   }
 
   public static void main(String[] args) {
-    System.out.println(ReverseString("123456"));
-    System.out.println(ReverseStringWithReelJava("123456"));
+    System.out.println(reverseString("123456"));
+    System.out.println(reverseStringWithReelJava("123456"));
     System.out.println(recursiveReversal("123456"));
   }
 }

@@ -1,7 +1,6 @@
-package mySolutions;
+package mySolutions.JavaScratches.Arrays;
 
 import java.util.*;
-import java.util.stream.*;
 class Person {
     String name;
     Integer id;

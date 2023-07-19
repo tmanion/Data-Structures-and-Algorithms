@@ -1,4 +1,4 @@
-package mySolutions;
+package mySolutions.JavaScratches.Arrays;
 
 import java.lang.Math;
 
@@ -69,4 +69,7 @@ public class scratch {
 
         arrayOfHiNTimes(6); // O(n) --> linear space
     }
+
+
+
 }
